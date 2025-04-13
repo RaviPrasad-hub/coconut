@@ -10,7 +10,10 @@ public class CaseIt {
 
 	public static void main(String args[]) {		
 		List<String> animals = Arrays.asList("zebra" , "lion");
+		                             List<String> alsoUpperCasedAnimals = animals.stream()
+			    .map(String::toUpperCase)
+			    .collect(Collectors.toList());
 		List<String> upperAnimals = animals.stream().map(String::toUpperCase).collect(Collectors.toList());
-				System.out.println("OUtput --> " +upperAnimals);
+				System.out.println("OUtput --> " +alsoUpperCasedAnimals);
 	}
 }
